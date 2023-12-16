@@ -12,8 +12,8 @@ import lblcs_logo from '@/public/lblcs_logo.svg';
 
 export default function Navbar() {
     return (
-        <nav className="w-20 h-screen fixed bg-[--bg-secondary] border-r-2 border-[--bg-primary] group hover:w-64 transition-all duration-600 ease-in " aria-label={"navbar"}>
-            <ul className={"list-none p-0 m-0 flex flex-col items-center h-screen"} aria-label={"navbar-container"}>
+        <nav className="bottom-0 md:top-0 w-screen md:w-20 h-20 md:h-screen fixed bg-[--bg-secondary] border-r-2 border-[--bg-primary] group md:hover:w-64 md:transition-all md:duration-600 md:ease-in " aria-label={"navbar"}>
+            <ul className={"list-none p-0 m-0 flex md:flex-col flex-row items-center h-full"} aria-label={"navbar-container"}>
                 <NavbarLogo href={"/"} text={"LBLCS"}>
                     <Image
                         src={lblcs_logo}
