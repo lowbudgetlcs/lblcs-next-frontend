@@ -10,6 +10,8 @@
   --bg-primary: #FFFDC3;
   --bg-secondary: #F8E3C0;
   --bg-tertiary: #f7f2ab;
+
+  --nav-margin: 5rem;
 }
 
 
@@ -25,7 +27,7 @@
   }
 
   main {
-    @apply ml-20 p-4
+    @apply ml-[--nav-margin] p-4
   }
 }
 

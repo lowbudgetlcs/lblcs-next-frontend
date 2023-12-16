@@ -9,14 +9,14 @@ interface NavbarButtonProps {
 
 export default function NavbarButton({ href, children, text }: NavbarButtonProps) {
     return (
-        <li className={"flex w-full last:mt-auto"}>
-            <Link href={href} className={"h-20 text-[--text-black]"} aria-label={"navbar-link"}>
-                <div className={"flex my-0 mx-6 items-center"} aria-label={"navbar-icon"}>
+        <li className={"w-full last:mt-auto"}>
+            <Link href={href} className={"flex items-center h-20"} aria-label={"navbar-link"}>
+                <div className={"min-w-8 my-0 mx-6"}>
                     {children}
-                    <p className={"hidden group-hover:block"}>
-                        {text}
-                    </p>
                 </div>
+                <span className={"hidden ml-4 delay-0 group-hover:delay-500 group-hover:inline"}>
+                    {text}
+                </span>
             </Link>
         </li>
     );
