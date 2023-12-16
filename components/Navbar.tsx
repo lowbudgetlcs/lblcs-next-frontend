@@ -1,4 +1,9 @@
 import Image from 'next/image';
+import { AiFillInfoCircle } from "react-icons/ai";
+import { MdLeaderboard } from "react-icons/md";
+import { GiPodium } from "react-icons/gi";
+import { MdOutlineAlternateEmail } from "react-icons/md";
+import { BsMoonStarsFill } from "react-icons/bs";
 
 import NavbarButton from "@/components/NavbarButton";
 
@@ -6,32 +11,38 @@ import LblcsLogo from '@/public/lblcs_logo.svg'
 
 export default function Navbar() {
     return (
-        <div className="flex border-b-2 border-black flex-wrap justify-between bg-white w-full">
-            <div className={"flex self-start gap-2 p-2"}>
-                <NavbarButton href={"/"}>
-                    <Image
-                        src={LblcsLogo}
-                        width={80}
-                        height={80}
-                        alt={"LBLCS Logo"}
-                    />
+        <nav className="fixed w-20 bg-[--bg-secondary] border-r-2 border-[--bg-primary] group transition-all duration-200 ease-out hover:w-64" aria-label={"navbar-container"}>
+            <ul className={"list-none p-0 m-0 flex flex-col items-center h-screen"} aria-label={"navbar-list"}>
+                <NavbarButton href={"/"} text={"Home"}>
+                        <Image
+                            src={LblcsLogo}
+                            height={0}
+                            width={0}
+                            style={{width: "4rem", height:"auto"}}
+                            alt={"LBLCS Logo"}
+                        />
                 </NavbarButton>
-            </div>
 
-            <div className={"flex self-center gap-5 p-2"}>
-                <NavbarButton href={"/about"}>
-                    About
+                <NavbarButton href={"/about"} text={"About"}>
+                    <AiFillInfoCircle size={42} />
                 </NavbarButton>
-                <NavbarButton href={"/standings"}>
-                    Standings
+
+                <NavbarButton href={"/standings"} text={"Standings"}>
+                    <GiPodium size={42} />
                 </NavbarButton>
-                <NavbarButton href={"/stats"}>
-                    Stats
+
+                <NavbarButton href={"/stats"} text={"Stats"}>
+                    <MdLeaderboard size={42} />
                 </NavbarButton>
-                <NavbarButton href={"/contact"}>
-                    Contact
+
+                <NavbarButton href={"/contact"} text={"Contact"}>
+                    <MdOutlineAlternateEmail size={42} />
                 </NavbarButton>
-            </div>
-        </div>
+
+                <NavbarButton href={""} text={"Theme"}>
+                    <BsMoonStarsFill size={42} />
+                </NavbarButton>
+            </ul>
+        </nav>
     );
 }
