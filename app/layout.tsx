@@ -20,8 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
+    <head>
+      <title>LowBudgetLCS</title>
+      <link rel="icon" href="/favicon.ico" sizes="any"/>
+    </head>
+    <body className={inter.className}>
+    <Navbar />
         {children}
         <Analytics />
       </body>

@@ -3,25 +3,42 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  font-size: 16px;
+  font-family: 'Cambria', serif;
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #FFFDC3;
+  --bg-secondary: #F8E3C0;
+  --bg-tertiary: #f7f2ab;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+
+@layer base {
+  html {
+    @apply bg-gradient-to-tr from-[--bg-primary] from-10% to-[--bg-secondary];
+    @apply scrollbar scrollbar-thumb scrollbar-track
+  }
+
+  body {
+    @apply m-0 p-0;
+  }
+
+  main {
+    @apply m-0 md:ml-20 p-4
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 0.25rem
+  }
+
+  .scrollbar-track::-webkit-scrollbar-track {
+    background: slategrey;
+  }
+
+  .scrollbar-thumb::-webkit-scrollbar-thumb {
+    background: aliceblue;
+  }
 }
