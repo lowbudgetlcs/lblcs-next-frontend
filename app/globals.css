@@ -5,18 +5,87 @@
 :root {
   font-size: 16px;
   font-family: 'Cambria', serif;
-  --text-primary: #b6b6b6;
-  --text-secondary: #ececec;
-  --bg-primary: #FFFDC3;
-  --bg-secondary: #F8E3C0;
-  --bg-tertiary: #f7f2ab;
+  --text-primary: #f3a712;
+  --text-secondary: #818589;
+
+  /* Light Mode */
+  --bg-primary: #FAF8F1;
+  --bg-secondary: #FAEAB1;
+  --bg-tertiary: #E5BA73;
+  --bg-highlight: #C58940;
+
+  /* Dark Mode */
+  /*--bg-primary: #404258;*/
+  /*--bg-secondary: #474E68;*/
+  /*--bg-tertiary: #50577A;*/
+  /*--bg-highlight: #6B728E;*/
+
+  /* Grays */
+  /*--bg-primary: #F0F5F9;*/
+  /*--bg-secondary: #C9D6DF;*/
+  /*--bg-tertiary: #52616B;*/
+  /*--bg-highlight: #1E2022;*/
+
+  /* Coffee */
+  /*--bg-primary: #AD8B73;*/
+  /*--bg-secondary: #CEAB93;*/
+  /*--bg-tertiary: #E3CAA5;*/
+  /*--bg-highlight: #FFFBE9;*/
+
+  /* Moss */
+  /*--bg-primary: #FFFFEC;*/
+  /*--bg-secondary: #F1E4C3;*/
+  /*--bg-tertiary: #C6A969;*/
+  /*--bg-highlight: #597E52;*/
+
+  /* This is the LBLCS */
+  /*--bg-primary: #F5F7F8;*/
+  /*--bg-secondary: #F4CE14;*/
+  /*--bg-tertiary: #495E57;*/
+  /*--bg-highlight: #45474B;*/
+
+  /* Earth Tones */
+  /*--bg-primary: #E5D9B6;*/
+  /*--bg-secondary: #A4BE7B;*/
+  /*--bg-tertiary: #5F8D4E;*/
+  /*--bg-highlight: #285430;*/
+
+  /* Cotton Candy */
+  /*--bg-primary: #FFC7C7;*/
+  /*--bg-secondary: #FFE2E2;*/
+  /*--bg-tertiary: #F6F6F6;*/
+  /*--bg-highlight: #8785A2;*/
+
+  /* Pastels */
+  /*--bg-primary: #FFCFDF;*/
+  /*--bg-secondary: #FEFDCA;*/
+  /*--bg-tertiary: #E0F9B5;*/
+  /*--bg-highlight: #A5DEE5;*/
+
+  /* Lilac */
+  /*--bg-primary: #BE9FE1;*/
+  /*--bg-secondary: #C9B6E4;*/
+  /*--bg-tertiary: #E1CCEC;*/
+  /*--bg-highlight: #F1F1F6;*/
+
+  /* Navy */
+  /*--bg-primary: #F1F6F9;*/
+  /*--bg-secondary: #14274E;*/
+  /*--bg-tertiary: #394867;*/
+  /*--bg-highlight: #9BA4B4;*/
+
+  /* Dark Purple */
+  /*--bg-primary: #2A2F4F;*/
+  /*--bg-secondary: #917FB3;*/
+  /*--bg-tertiary: #E5BEEC;*/
+  /*--bg-highlight: #FDE2F3;*/
 }
 
 
 
 @layer base {
   html {
-    @apply bg-gradient-to-tr from-[--bg-primary] from-10% to-[--bg-secondary];
+    /*@apply bg-gradient-to-tr from-[--bg-primary] from-10% to-[--bg-secondary];*/
     @apply scrollbar scrollbar-thumb scrollbar-track
   }
 

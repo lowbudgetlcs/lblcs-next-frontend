@@ -5,8 +5,9 @@ import React from 'react';
 // @ts-ignore
 import { Analytics } from '@vercel/analytics/react'
 import Navbar from "@/components/Navbar";
+import { NextFont } from "next/dist/compiled/@next/font";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter: NextFont = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'LowBudgetLCS',
