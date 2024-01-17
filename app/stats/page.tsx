@@ -1,4 +1,4 @@
-import StatTable from "@/components/StatTable";
+import StatTable from "@/components/StatTable/Stats";
 
 export default function Stats() {
     return (
